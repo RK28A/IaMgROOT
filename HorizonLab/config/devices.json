@@ -1,0 +1,63 @@
+{
+  "_comment": "Base de connaissances d'identification. 'evidence' : known = documenté publiquement ou largement établi ; hypothesis = rapporté par la communauté, à confirmer sur vos images. Modifiez ce fichier pour ajouter des modèles sans toucher au code.",
+  "models": [
+    {
+      "id": "quest2",
+      "name": "Meta Quest 2",
+      "codenames": ["hollywood"],
+      "evidence": "known",
+      "soc": "Qualcomm Snapdragon XR2 (famille SM8250)",
+      "soc_evidence": "known",
+      "board_platforms": ["kona"],
+      "board_platform_evidence": "hypothesis",
+      "model_strings": ["Quest 2"],
+      "firmware_prefixes": ["q2_"]
+    },
+    {
+      "id": "quest3",
+      "name": "Meta Quest 3",
+      "codenames": ["eureka"],
+      "evidence": "known",
+      "soc": "Qualcomm Snapdragon XR2 Gen 2",
+      "soc_evidence": "known",
+      "board_platforms": [],
+      "board_platform_evidence": "hypothesis",
+      "model_strings": ["Quest 3"],
+      "firmware_prefixes": ["q3_"]
+    },
+    {
+      "id": "questpro",
+      "name": "Meta Quest Pro",
+      "codenames": ["seacliff"],
+      "evidence": "hypothesis",
+      "soc": "Qualcomm Snapdragon XR2+",
+      "soc_evidence": "known",
+      "board_platforms": [],
+      "board_platform_evidence": "hypothesis",
+      "model_strings": ["Quest Pro"],
+      "firmware_prefixes": ["qp_"]
+    },
+    {
+      "id": "quest3s",
+      "name": "Meta Quest 3S",
+      "codenames": ["panther"],
+      "evidence": "hypothesis",
+      "soc": "Qualcomm Snapdragon XR2 Gen 2",
+      "soc_evidence": "known",
+      "board_platforms": [],
+      "board_platform_evidence": "hypothesis",
+      "model_strings": ["Quest 3S"],
+      "firmware_prefixes": ["q3s_"]
+    }
+  ],
+  "signal_weights": {
+    "ro.product.device": 5,
+    "ro.product.vendor.device": 5,
+    "ro.product.system.device": 3,
+    "ro.build.product": 4,
+    "ro.product.model": 4,
+    "ro.product.name": 3,
+    "ro.board.platform": 1,
+    "firmware_name": 1
+  }
+}

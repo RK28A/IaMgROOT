@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "horizonlab"
+version = "0.1.0"
+description = "Plateforme de recherche, diagnostic et compatibilité Meta Quest 2 / Quest 3 (analyse en lecture seule)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Proprietary - usage personnel" }
+dependencies = [
+  "pyelftools>=0.29",
+]
+
+[project.optional-dependencies]
+disasm = ["capstone>=5.0"]
+dev = ["pytest>=7", "capstone>=5.0"]
+
+[project.scripts]
+horizonlab = "horizonlab.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["horizonlab*"]
+
+[tool.setuptools.package-data]
+"horizonlab.ui" = ["static/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+  "device: nécessite un casque physique connecté et une autorisation explicite (désactivé par défaut)",
+  "slow: tests longs (construction d'images, QEMU)",
+]
+addopts = "-m 'not device'"

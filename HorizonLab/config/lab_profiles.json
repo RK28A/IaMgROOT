@@ -1,0 +1,21 @@
+{
+  "_comment": "Profils matériels du laboratoire : fichiers STATIQUES créés dans le sysroot pour que les programmes qui lisent /sys ou /proc obtiennent une valeur plausible. Aucun pilote n'est émulé ; les ioctl sur périphériques ne sont pas pris en charge. Chaque fichier est marqué 'simulé' dans le rapport.",
+  "profiles": {
+    "none": {"files": {}},
+    "default": {
+      "files": {
+        "/sys/class/thermal/thermal_zone0/type": "cpu-0-0-usr\n",
+        "/sys/class/thermal/thermal_zone0/temp": "38000\n",
+        "/sys/class/thermal/thermal_zone1/type": "gpuss-0-usr\n",
+        "/sys/class/thermal/thermal_zone1/temp": "41000\n",
+        "/sys/class/power_supply/battery/capacity": "80\n",
+        "/sys/class/power_supply/battery/status": "Discharging\n",
+        "/sys/class/power_supply/battery/temp": "290\n",
+        "/sys/devices/soc0/machine": "HORIZONLAB-SIMULATED\n",
+        "/sys/devices/soc0/soc_id": "0\n",
+        "/proc/device-tree/model": "HorizonLab simulated board\u0000",
+        "/dev/__properties__/README": "Zone de propriétés non servie dans le laboratoire (pas de property_service).\n"
+      }
+    }
+  }
+}
